@@ -58,10 +58,11 @@ header {
       font-weight: 500;
   }
 /*Main Container*/
-.container{
-    height:70%;
-    width:100%;
-    text-align: center;
+#container{
+  height:70%;
+  width:100%;
+  text-align: center;
+  
 }
 button {
     font-family: 'Montserrat';
@@ -72,8 +73,10 @@ button {
     border-radius: 4px;
     background-color: var(--aqua);
     border: 1px solid var(--dark-font-color);
-
   }
+.results-div p{
+  white-space: pre-line;
+}
 /*Footer*/
 footer{
     width: 100%;
