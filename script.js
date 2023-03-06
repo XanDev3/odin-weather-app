@@ -2,19 +2,9 @@
 
 const btn = document.getElementById('btn');
 btn.addEventListener('click', async (e) => {
-    //let isZip = null;
-/*     console.log(isNumeric(locInput))
-    if (isNumeric(locInput)){
-        isZip = true;
-        getWeather(true, locInput)
-    }
-    else {
-        isZip = false; */
     e.preventDefault();
     //e.stopPropagation();
     await getWeather();
-    
-    //}
 })
 
 async function getWeather(){
@@ -35,9 +25,9 @@ async function getWeather(){
 function addToDom(jsonData){
     let resultsDiv =  document.querySelector('.results-div');
     let resultsP = document.createElement('p');
-            resultsP.textContent = `Name: ${jsonData.name} \n
-                                  Country: ${jsonData.sys.country} \n
-                                  Weather: ${jsonData.weather[0].main} \n
+            resultsP.textContent = `Name: ${jsonData.name}
+                                  Country: ${jsonData.sys.country}
+                                  Weather: ${jsonData.weather[0].main}
                                   Temp: ${Math.round(jsonData.main.temp)}°F`
             resultsDiv.append(resultsP);
         
