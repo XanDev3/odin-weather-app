@@ -16,7 +16,6 @@ async function getWeather(){
             const fetchUrl = url 
             let response = await fetch(fetchUrl) 
             const weatherData = await response.json()
-            console.log(weatherData);
             addToDom(weatherData)
 
     } catch (err) {console.error(err)}
@@ -25,11 +24,11 @@ async function getWeather(){
 function addToDom(jsonData){
     let resultsDiv =  document.querySelector('.results-div');
     let resultsP = document.createElement('p');
-            resultsP.textContent = `Name: ${jsonData.name}
+            resultsP.textContent = `City: ${jsonData.name}
                                   Country: ${jsonData.sys.country}
                                   Weather: ${jsonData.weather[0].main}
-                                  Temp: ${Math.round(jsonData.main.temp)}°F`
-            resultsDiv.append(resultsP);
+                                  Temp: ${Math.round(jsonData.main.temp)}°F`;
+            resultsDiv.replaceChildren(resultsP);
         
 }
 function getDataFromForm(){

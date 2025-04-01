@@ -39,7 +39,7 @@ header {
     display: inline-block;
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(90deg, var(--light-aqua) 0%, var(--purple) 100%);
+    background: linear-gradient(90deg, var(--dark-aqua) 0%, var(--purple) 100%);
     border-color: 1px solid var(--dark-font-color);
   }
   i, h1 {
@@ -64,18 +64,32 @@ header {
   text-align: center;
   
 }
+input[type=text] {
+  padding: .5rem 1rem;
+  margin: 1rem .5rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 button {
     font-family: 'Montserrat';
-    color: var(--purple);
+    font-weight: 500;
+    color: var(--dark-font-color);
     cursor: pointer;
     margin-top: 8px;
-    padding: 4px;
+    padding: .5rem;
     border-radius: 4px;
     background-color: var(--aqua);
-    border: 1px solid var(--dark-font-color);
+    border: none/* 1px solid var(--purple) */;
   }
+button:hover{
+  background-color: var(--dark-aqua);
+  border: none/* 1px solid var(--purple) */;
+}
 .results-div p{
   white-space: pre-line;
+  margin-top: 1rem;
 }
 /*Footer*/
 footer{
